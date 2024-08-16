@@ -2,15 +2,6 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      primary: "#231F20",
-      secondary: {
-        default: "#F9CB10",
-        yray: "#FFDB4B",
-      },
-      blue: "#119EEE",
-      gray: "#EBEBEB",
-    },
     fontFamily: {
       cExtralight: "ClashDisplay-Extralight",
       cLight: "ClashDisplay-Light",
@@ -21,6 +12,15 @@ export default {
       cVariable: "ClashDisplay-Variable",
     },
     extend: {
+      colors: {
+        primary: "#231F20",
+        secondary: {
+          default: "#F9CB10",
+          yray: "#FFDB4B",
+        },
+        blue: "#119EEE",
+        gray: "#EBEBEB",
+      },
       borderRadius: {
         '5xl': '50px',
       }

@@ -1,8 +1,9 @@
 import React from 'react'
+import ComingSoon from './ComingSoon'
 
 const Portfolio = () => {
   return (
-    <div>Portfolio</div>
+    <div> <ComingSoon/> </div>
   )
 }
 
