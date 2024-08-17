@@ -1,19 +1,19 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import "./index.css";
 
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage.jsx";
-import NotFound from "./pages/NotFound.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LandingPage />,
-    errorElement: <NotFound />
+    errorElement: <NotFound />,
   },
   {
     path: "/portfolio",
@@ -21,8 +21,8 @@ const router = createBrowserRouter([
   },
 ]);
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-      <RouterProvider router={router} />
-  </StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
