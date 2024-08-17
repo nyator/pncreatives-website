@@ -71,11 +71,11 @@ const Navbar = () => {
         <div>
           <img src={logo} alt="pncreatives" className="size-8" />
         </div>
-        <div className="hidden md:flex space-x-[60px] bg-gray py-2 px-5 font-cMedium text-navblack text-[13px] rounded-full">
+        <div className="hidden md:flex space-x-[60px] bg-gray py-3 px-5 font-cMedium text-navblack text-[13px] rounded-full">
           {navLinks.map((items, index) => {
             return (
               <>
-                <li key={index} className="list-none">
+                <li key={index} className="list-none text-[12px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
                   <Link to={items.href}>{items.title}</Link>
                 </li>
               </>
@@ -115,7 +115,7 @@ const Navbar = () => {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="h-full flex flex-col items-center justify-start px-10 gap-10 mt-20"
+                className="h-full flex flex-col items-center justify-start px-10 gap-10 mt-32"
               >
                 {navLinks.map((items, index) => {
                   return (
@@ -126,7 +126,7 @@ const Navbar = () => {
                           initial="initial"
                           animate="open"
                           key={index}
-                          className="list-none flex justify-center items-center w-fit text-[50px] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
+                          className="list-none flex justify-center items-center w-fit  text-[50px] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
                         >
                           <Link to={items.href}>{items.title}</Link>
                         </motion.div>
@@ -134,7 +134,7 @@ const Navbar = () => {
                     </>
                   );
                 })}
-                <button className="bg-secondary-yray py-2 px-5 font-cMedium text-navblack text-[20px] rounded-full hover:scale-150 hover:bg-secondary-default hover:border-2 border-dashed border-gray transition-all duration-500 ease-in-out ">
+                <button className="bg-secondary-yray py-2 px-5 font-cMedium text-navblack text-[20px] rounded-full border-secondary-default border-2 hover:scale-150 hover:bg-secondary-default hover:border-2 hover:border-dashed hover:border-gray transition-all duration-500 ease-in-out ">
                   <a href="">Contact US</a>
                 </button>
                 <p className="font-cExtrathin absolute bottom-10 z-10 text-[#a8a7a7] text-[12px] ">
