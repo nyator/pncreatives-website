@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
+import { styles } from "../constants/index.js";
 import { logo } from "../constants/assets.js";
 import { CgMenuMotion } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
@@ -12,7 +13,7 @@ const navLinks = [
   { title: "Portfolio", href: "/portfolio" },
 ];
 
-const Navbar = () => {
+const Navbar = ({title , className }) => {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -67,7 +68,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex bg-red-400 font-cVariable w-4/5 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-10 rounded-full">
+      <div className={`${title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`}  ${className}  flex font-cVariable w-4/5 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-10 rounded-full fixed z-10`}>
         <div>
           <img src={logo} alt="pncreatives" className="size-8" />
         </div>
@@ -83,14 +84,14 @@ const Navbar = () => {
           })}
         </div>
 
-        <button className="hidden md:flex  bg-secondary-default py-2 px-5 font-cMedium text-navblack text-[15px] rounded-full ">
+        <button className="hidden md:flex bg-secondary-default py-2 px-5 font-cMedium text-navblack text-[15px] rounded-full ">
           <a href="">Contact US</a>
         </button>
 
         <button className="md:hidden" onClick={toggleMenu}>
           <CgMenuMotion className="size-7 text-primary" />
         </button>
-
+        </div>
         <AnimatePresence>
           {open && (
             <motion.div
@@ -98,7 +99,7 @@ const Navbar = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="fixed md:hidden h-screen w-full origin-top left-0 top-0 bg-gray"
+              className="fixed md:hidden h-screen w-full origin-top left-0 top-0 bg-gray z-20"
             >
               <div className="flex w-4/5 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-10 rounded-full">
                 <div>
@@ -115,7 +116,7 @@ const Navbar = () => {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="h-full flex flex-col items-center justify-start px-10 gap-10 mt-32"
+                className="h-full flex flex-col items-center justify-start px-10 gap-10 mt-[5rem] md:mt-32"
               >
                 {navLinks.map((items, index) => {
                   return (
@@ -126,7 +127,7 @@ const Navbar = () => {
                           initial="initial"
                           animate="open"
                           key={index}
-                          className="list-none flex justify-center items-center w-fit  text-[50px] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
+                          className="list-none flex justify-center items-center w-fit font-cVariable text-[50px] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
                         >
                           <Link to={items.href}>{items.title}</Link>
                         </motion.div>
@@ -144,7 +145,7 @@ const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      
     </>
   );
 };

@@ -3,11 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      'sm': '640px',
-      'md': '890px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
+      sm: "640px",
+      md: "890px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
     },
     fontFamily: {
       cExtralight: "ClashDisplay-Extralight",
@@ -30,9 +30,10 @@ export default {
         blue: "#119EEE",
         gray: "#EBEBEB",
       },
-      borderRadius: {
-        '5xl': '50px',
-      }
+      fontSize: {
+        clamp: "clamp(30px, 5vw, 95px)",
+        clamp_2: "clamp(8px, 1vw, 30px)",
+      },
     },
   },
   plugins: [],
