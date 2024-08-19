@@ -13,7 +13,7 @@ const LandingPage = () => {
   return (
     <>
       <div className="w-4/5 mx-auto">
-        <Navbar title="Portfolio" />
+        <Navbar title="" />
       </div>
       <section className="text-primary  font-cVariable w-4/5 h-screen mx-auto justify-between items-center pt-[120px] md:pt-[180px]">
         <div className="leading-none font-cRegular line-clamp-[7] relative">

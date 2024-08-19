@@ -101,7 +101,7 @@ const Navbar = ({title , className }) => {
               exit="exit"
               className="fixed md:hidden h-screen w-full origin-top left-0 top-0 bg-gray z-20"
             >
-              <div className="flex w-4/5 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-10 rounded-full">
+              <div className="flex w-4/5 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full">
                 <div>
                   <img src={logo} alt="pnCreatives" className="size-8" />
                 </div>
