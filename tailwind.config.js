@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      sm: "640px",
+      sm: "520px",
       md: "890px",
       lg: "1024px",
       xl: "1280px",
@@ -33,7 +33,13 @@ export default {
       fontSize: {
         clamp: "clamp(30px, 5vw, 95px)",
         clamp_2: "clamp(8px, 1vw, 30px)",
+        clamp_name: "clamp(15px, 2vw, 60px)",
+        clamp_desc: "clamp(10px, 1vw, 25px)",
+        clamp_text: "clamp(6px, 2vw, 19px)",
       },
+      width: {
+        'myspace': '49%',
+      }
     },
   },
   plugins: [],

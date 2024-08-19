@@ -4,6 +4,7 @@ import rightarrow from '../assets/images/rightarrow.svg'
 import underline from '../assets/images/underline.svg'
 import lRectangle from '../assets/images/lRectangle.svg'
 import rRectangle from '../assets/images/rRectangle.svg'
+import hireus from '../assets/images/hireus.svg'
 
 export {
     logo,
@@ -12,4 +13,5 @@ export {
     underline,
     lRectangle,
     rRectangle,
+    hireus,
 }

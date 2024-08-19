@@ -68,9 +68,9 @@ const Navbar = ({title , className }) => {
 
   return (
     <>
-      <div className={`${title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`}  ${className}  flex font-cVariable w-4/5 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-10 rounded-full fixed z-10`}>
+      <div className={`${title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`}  ${className}  flex font-cVariable w-4/5 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full fixed z-10`}>
         <div>
-          <img src={logo} alt="pncreatives" className="size-8" />
+          <img src={logo} alt="pnCreatives" className="size-8" />
         </div>
         <div className="hidden md:flex space-x-[60px] bg-gray py-3 px-5 font-cMedium text-navblack text-[13px] rounded-full">
           {navLinks.map((items, index) => {
@@ -103,7 +103,7 @@ const Navbar = ({title , className }) => {
             >
               <div className="flex w-4/5 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-10 rounded-full">
                 <div>
-                  <img src={logo} alt="pncreatives" className="size-8" />
+                  <img src={logo} alt="pnCreatives" className="size-8" />
                 </div>
 
                 <button className="md:hidden" onClick={toggleMenu}>
