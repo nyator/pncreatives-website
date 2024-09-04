@@ -69,11 +69,11 @@ const Navbar = ({title , className }) => {
   return (
     <>
       <div className={`${title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`}  ${className}  flex font-cVariable w-9/12 md:w-4/6 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full fixed z-10`}>
-        <div>
-          <img src={logo} alt="pnCreatives" className="size-8" />
-        </div>
+        <Link to='/'>
+          <img src={logo} alt="pncreatives" className="size-8" />
+        </Link>
         <div className="hidden md:flex space-x-[60px] bg-gray py-3 px-5 font-cMedium text-navblack text-[13px] rounded-full">
-          {navLinks.map((items, index) => {
+          {navLinks.map((items) => {
             return (
               <div key={items.id}>
                 <li className="list-none text-[12px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
@@ -99,12 +99,12 @@ const Navbar = ({title , className }) => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="fixed md:hidden h-screen w-full origin-top left-0 top-0 bg-gray z-20"
+              className="fixed md:hidden h-screen w-full origin-top left-0 top-0 bg-white z-20"
             >
               <div className="flex w-9/12 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full">
-                <div>
+                <Link to='/'>
                   <img src={logo} alt="pnCreatives" className="size-8" />
-                </div>
+                </Link>
 
                 <button className="md:hidden" onClick={toggleMenu}>
                   <AiFillCloseCircle className="size-7 text-primary" />
@@ -118,7 +118,7 @@ const Navbar = ({title , className }) => {
                 exit="exit"
                 className="h-full flex flex-col items-center justify-start px-10 gap-10 mt-[5rem] md:mt-32"
               >
-                {navLinks.map((items, index) => {
+                {navLinks.map((items) => {
                   return (
                     <>
                       <div className="overflow-hidden">
@@ -126,8 +126,8 @@ const Navbar = ({title , className }) => {
                           variants={mobileLinkVars}
                           initial="initial"
                           animate="open"
-                          key={index}
-                          className="list-none flex justify-center items-center w-fit font-cVariable text-[50px] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
+                          key={items.id}
+                          className="list-none flex justify-center items-center w-fit font-cVariable text-[3rem] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
                         >
                           <Link to={items.href}>{items.title}</Link>
                         </motion.div>

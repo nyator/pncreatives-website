@@ -24,8 +24,8 @@ export default {
         navblack: "#575757",
 
         secondary: {
-          default: "#F9CB10",
-          yray: "#FFDB4B",
+          default: "#ffcc00",
+          yray: "#ffdb4b",
         },
         blue: "#119EEE",
         gray: "#EBEBEB",
@@ -34,11 +34,12 @@ export default {
         clamp: "clamp(30px, 5vw, 95px)",
         clamp_2: "clamp(8px, 1vw, 30px)",
         clamp_name: "clamp(20px, 2vw, 60px)",
-        clamp_desc: "clamp(12px, 1vw, 25px)",
-        clamp_text: "clamp(10px, 2vw, 20px)",
+        clamp_desc: "clamp(0.8rem, 1vw, 25px)",
+        clamp_text: "clamp(0.9rem, 2vw, 1.2rem)",
       },
       width: {
         'myspace': '47%',
+        "clamp": 'clamp(10px, 80vw, 500px)'
       }
     },
   },
