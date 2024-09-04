@@ -39,7 +39,7 @@ export default {
       },
       width: {
         'myspace': '47%',
-        "clamp": 'clamp(10px, 80vw, 500px)'
+        'clamp': 'clamp(10%, 100vw, 100%)'
       }
     },
   },

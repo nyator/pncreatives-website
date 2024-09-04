@@ -139,7 +139,7 @@ const Navbar = ({title , className }) => {
                   <a href="">Contact US</a>
                 </button>
                 <p className="font-cExtrathin absolute bottom-10 z-10 text-[#a8a7a7] text-[12px] ">
-                  ©PN Creatives
+                  ©PNCREATIVES
                 </p>
               </motion.div>
             </motion.div>

@@ -13,7 +13,7 @@ const LandingPage = () => {
   return (
     <>
       <div className="w-9/12 md:w-4/6 mx-auto">
-        <Navbar title="" />
+        <Navbar title=""/>
       </div>
 
       <section className="text-primary font-cVariable w-9/12 md:w-4/6 mx-auto h-screen justify-center items-center content-evenly space-y-[2rem] ">
@@ -25,12 +25,16 @@ const LandingPage = () => {
               <p className="text-clamp_2 px-5 py-[1.5px] rounded-full bg-gradient-to-r from-white to-secondary-default text-nowrap">
                 create'n space
               </p>
+              
             </div>
           </h1>
           <h1 className="text-clamp text-center">Brand With Pro</h1>
           <h1 className="text-clamp text-end relative">Creative Services</h1>
         </div>
 
+        {/* <div className="absolute top-0 right-[-30px] w-clamp">
+                <img src={leftarrow} alt="left Arrow" className="object-fit"/>
+              </div> */}
         {/* <img src={rightarrow} alt="left Arrow" className="absolute left-[-100px] top-[8rem]"/> */}
         {/* <img src={underline} alt="underline" className="absolute size-10 object-none top-[105rem] right-[0rem] md:size-3/5"/> */}
 
