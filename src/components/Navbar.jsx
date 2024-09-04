@@ -8,9 +8,9 @@ import { CgMenuMotion } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 const navLinks = [
-  { title: "Services", href: "/" },
-  { title: "About Us", href: "/" },
-  { title: "Portfolio", href: "/portfolio" },
+  { title: "Services", href: "/", id:1 },
+  { title: "About Us", href: "/", id:2},
+  { title: "Portfolio", href: "/portfolio", id:3},
 ];
 
 const Navbar = ({title , className }) => {
@@ -68,18 +68,18 @@ const Navbar = ({title , className }) => {
 
   return (
     <>
-      <div className={`${title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`}  ${className}  flex font-cVariable w-4/5 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full fixed z-10`}>
+      <div className={`${title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`}  ${className}  flex font-cVariable w-9/12 md:w-4/6 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full fixed z-10`}>
         <div>
           <img src={logo} alt="pnCreatives" className="size-8" />
         </div>
         <div className="hidden md:flex space-x-[60px] bg-gray py-3 px-5 font-cMedium text-navblack text-[13px] rounded-full">
           {navLinks.map((items, index) => {
             return (
-              <>
-                <li key={index} className="list-none text-[12px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
+              <div key={items.id}>
+                <li className="list-none text-[12px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
                   <Link to={items.href}>{items.title}</Link>
                 </li>
-              </>
+              </div>
             );
           })}
         </div>
@@ -101,7 +101,7 @@ const Navbar = ({title , className }) => {
               exit="exit"
               className="fixed md:hidden h-screen w-full origin-top left-0 top-0 bg-gray z-20"
             >
-              <div className="flex w-4/5 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full">
+              <div className="flex w-9/12 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full">
                 <div>
                   <img src={logo} alt="pnCreatives" className="size-8" />
                 </div>

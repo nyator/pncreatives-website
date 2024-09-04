@@ -33,12 +33,12 @@ export default {
       fontSize: {
         clamp: "clamp(30px, 5vw, 95px)",
         clamp_2: "clamp(8px, 1vw, 30px)",
-        clamp_name: "clamp(15px, 2vw, 60px)",
-        clamp_desc: "clamp(10px, 1vw, 25px)",
-        clamp_text: "clamp(6px, 2vw, 19px)",
+        clamp_name: "clamp(20px, 2vw, 60px)",
+        clamp_desc: "clamp(12px, 1vw, 25px)",
+        clamp_text: "clamp(10px, 2vw, 20px)",
       },
       width: {
-        'myspace': '49%',
+        'myspace': '47%',
       }
     },
   },

@@ -2,16 +2,14 @@ import React from 'react'
 
 const NotFound = () => {
   return (
-    <div class="max-w-2xl mx-auto text-center flex flex-col items-center justify-center h-svh">
-    <h2 class="text-3xl font-cBold text-red-600  sm:text-4xl lg:text-5xl">404</h2>
-    <h2 class="text-3xl font-cRegular text-primary  sm:text-xl lg:text-2xl">Page Not Found</h2>
-
-    <img
-      class="w-full min-w-full mx-auto mt-12 scale-150 max-w-7xl lg:min-w-0 lg:mt-0 lg:scale-100"
-      src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/1/services-icons.png"
-      alt=""
-    />
+    <div className='h-screen w-screen bg-black'>
+      
+    <div className="max-w-2xl mx-auto text-center flex items-center justify-center h-svh gap-2 ">
+    <h2 className="text-clamp_name font-cBold text-red-600 ">404</h2>
+    <span className='text-white/50'>|</span>
+    <h2 className="text-clamp_text font-cRegular text-white/50 ">This page could not be found</h2>
   </div>
+    </div>
   )
 }
 
