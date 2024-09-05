@@ -30,6 +30,11 @@ export default {
         blue: "#119EEE",
         gray: "#EBEBEB",
       },
+
+      backgroundImage: {
+        'hero-pattern': "url(../src/assets/images/background.svg)",
+      },
+
       fontSize: {
         clamp: "clamp(30px, 5vw, 95px)",
         clamp_2: "clamp(8px, 1vw, 30px)",
@@ -37,10 +42,12 @@ export default {
         clamp_desc: "clamp(0.8rem, 1vw, 25px)",
         clamp_text: "clamp(0.9rem, 2vw, 1.2rem)",
       },
+
       width: {
         'myspace': '47%',
         'clamp': 'clamp(10%, 100vw, 100%)'
-      }
+      },
+      
     },
   },
   plugins: [],

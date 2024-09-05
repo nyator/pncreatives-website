@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar.jsx";
 import {
   leftarrow,
   rightarrow,
@@ -12,17 +11,14 @@ import {
 const LandingPage = () => {
   return (
     <>
-      <div className="w-9/12 md:w-4/6 mx-auto">
-        <Navbar title=""/>
-      </div>
-
-      <section className="text-primary font-cVariable w-9/12 md:w-4/6 mx-auto h-screen justify-center items-center content-evenly space-y-[2rem] ">
+    <div className="bg-hero-pattern">
+      <section className="text-primary font-cVariable w-9/12 md:w-4/6 mx-auto h-screen justify-center items-center content-evenly space-y-[3rem]">
  
         <div className="leading-none font-cRegular line-clamp-[7]">
           <h1 className="text-clamp text-start relative">
             Refresh Your
-            <div className="bg-gradient-to-l from-white to-secondary-default absolute left-2/3 md:left-2/4 top-1/3 rounded-full p-[2px]">
-              <p className="text-clamp_2 px-5 py-[1.5px] rounded-full bg-gradient-to-r from-white to-secondary-default text-nowrap">
+            <div className="bg-gradient-to-l from-white to-secondary-default absolute left-2/3 md:left-2/4 top-1/3 rounded-full p-[2px] -z-10">
+              <p className="text-clamp_2 px-2 py-[1.5px] rounded-full bg-gradient-to-r from-white to-secondary-default text-nowrap">
                 create'n space
               </p>
               
@@ -42,7 +38,7 @@ const LandingPage = () => {
         
           <div className="w-full md:w-myspace bg-primary h-[10rem] text-white p-3 rounded-[20px]">
             <div className=" flex items-center justify-between pb-4">
-              <h1 className="text-clamp_name font-cBold">300+</h1>
+              <h1 className="text-clamp_name font-cSemibold">300+</h1>
               <h1 className="text-clamp_desc font-cRegular">Projects</h1>
             </div>
             <p className="text-clamp_text text-[#B3B3B3] text-base font-cRegular">
@@ -53,7 +49,7 @@ const LandingPage = () => {
 
           <div className="w-full md:w-myspace bg-gradient-to-br from-secondary-yray to-secondary-default h-[10rem] flex flex-col p-3 rounded-[20px]">
             <div className=" flex items-center justify-between pb-4">
-              <h1 className="text-clamp_name font-cBold">150+</h1>
+              <h1 className="text-clamp_name font-cSemibold">150+</h1>
               <h1 className="text-clamp_desc font-cRegular">Clients</h1>
             </div>
             <p className="text-clamp_text text-[#3F3E3E] text-base font-cRegular">
@@ -66,6 +62,7 @@ const LandingPage = () => {
           <img src={leftarrow} alt="left Arrow" className="object-cover"/>
         </div> */}
       </section>
+      </div>
 
       <section id="about" className="h-screen bg-primary"></section>
     </>

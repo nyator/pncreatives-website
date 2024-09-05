@@ -8,12 +8,12 @@ import { CgMenuMotion } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 const navLinks = [
-  { title: "Services", href: "/", id:1 },
-  { title: "About Us", href: "/", id:2},
-  { title: "Portfolio", href: "/portfolio", id:3},
+  { title: "Services", href: "/", id: 1 },
+  { title: "About Us", href: "/#about", id: 2 },
+  { title: "Portfolio", href: "/portfolio", id: 3 },
 ];
 
-const Navbar = ({title , className }) => {
+const Navbar = ({ title, className }) => {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -68,8 +68,12 @@ const Navbar = ({title , className }) => {
 
   return (
     <>
-      <div className={`${title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`}  ${className}  flex font-cVariable w-9/12 md:w-4/6 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full fixed z-10`}>
-        <Link to='/'>
+      <div
+        className={`${
+          title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`
+        }  ${className}  flex font-cVariable w-9/12 md:w-4/6 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full fixed z-10`}
+      >
+        <Link to="/">
           <img src={logo} alt="pncreatives" className="size-8" />
         </Link>
         <div className="hidden md:flex space-x-[60px] bg-gray py-3 px-5 font-cMedium text-navblack text-[13px] rounded-full">
@@ -91,61 +95,60 @@ const Navbar = ({title , className }) => {
         <button className="md:hidden" onClick={toggleMenu}>
           <CgMenuMotion className="size-7 text-primary" />
         </button>
-        </div>
-        <AnimatePresence>
-          {open && (
+      </div>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            variants={mobNav}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="fixed md:hidden h-screen w-full origin-top left-0 top-0 bg-white z-20"
+          >
+            <div className="flex w-9/12 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full">
+              <Link to="/" onClick={toggleMenu} >
+                <img src={logo} alt="pnCreatives" className="size-8"/>
+              </Link>
+
+              <button className="md:hidden" onClick={toggleMenu}>
+                <AiFillCloseCircle className="size-7 text-primary" />
+              </button>
+            </div>
+
             <motion.div
-              variants={mobNav}
+              variants={menuVars}
               initial="initial"
               animate="animate"
               exit="exit"
-              className="fixed md:hidden h-screen w-full origin-top left-0 top-0 bg-white z-20"
+              className="h-full flex flex-col items-center justify-start px-10 gap-10 mt-[5rem] md:mt-32"
             >
-              <div className="flex w-9/12 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full">
-                <Link to='/'>
-                  <img src={logo} alt="pnCreatives" className="size-8" />
-                </Link>
-
-                <button className="md:hidden" onClick={toggleMenu}>
-                  <AiFillCloseCircle className="size-7 text-primary" />
-                </button>
-              </div>
-
-              <motion.div
-                variants={menuVars}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                className="h-full flex flex-col items-center justify-start px-10 gap-10 mt-[5rem] md:mt-32"
-              >
-                {navLinks.map((items) => {
-                  return (
-                    <>
-                      <div className="overflow-hidden">
-                        <motion.div
-                          variants={mobileLinkVars}
-                          initial="initial"
-                          animate="open"
-                          key={items.id}
-                          className="list-none flex justify-center items-center w-fit font-cVariable text-[3rem] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
-                        >
-                          <Link to={items.href}>{items.title}</Link>
-                        </motion.div>
-                      </div>
-                    </>
-                  );
-                })}
-                <button className="bg-secondary-yray py-2 px-5 font-cMedium text-navblack text-[20px] rounded-full border-secondary-default border-2 hover:scale-150 hover:bg-secondary-default hover:border-2 hover:border-dashed hover:border-gray transition-all duration-500 ease-in-out ">
-                  <a href="">Contact US</a>
-                </button>
-                <p className="font-cExtrathin absolute bottom-10 z-10 text-[#a8a7a7] text-[12px] ">
-                  ©PNCREATIVES
-                </p>
-              </motion.div>
+              {navLinks.map((items) => {
+                return (
+                  <>
+                    <div className="overflow-hidden">
+                      <motion.div
+                        variants={mobileLinkVars}
+                        initial="initial"
+                        animate="open"
+                        key={items.id}
+                        className="list-none flex justify-center items-center w-fit font-cVariable text-[3rem] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
+                      >
+                        <Link to={items.href} onClick={toggleMenu}> {items.title} </Link>
+                      </motion.div>
+                    </div>
+                  </>
+                );
+              })}
+              <button className="bg-secondary-yray py-2 px-5 font-cMedium text-navblack text-[20px] rounded-full border-secondary-default border-2 hover:scale-150 hover:bg-secondary-default hover:border-2 hover:border-dashed hover:border-white transition-all duration-500 ease-in-out ">
+                <Link to="">Contact US</Link>
+              </button>
+              <p className="font-cLight tracking-widest absolute bottom-10 z-10 text-[#a8a7a7] text-[12px] ">
+                ©PNCREATIVES
+              </p>
             </motion.div>
-          )}
-        </AnimatePresence>
-      
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

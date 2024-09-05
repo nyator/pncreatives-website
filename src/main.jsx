@@ -7,18 +7,30 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "./pages/LandingPage.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import Layout from "./Layout.jsx";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage />,
+    element: <Layout />,
     errorElement: <NotFound />,
+    children: [
+      {
+        path: "/",
+        element: <LandingPage />,
+      },
+      {
+        path: "/:about",
+        element: <LandingPage />,
+      },
+      {
+        path: "/portfolio",
+        element: <Portfolio />,
+      },
+    ],
   },
-  {
-    path: "/portfolio",
-    element: <Portfolio />,
-  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
