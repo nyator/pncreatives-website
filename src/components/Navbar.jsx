@@ -136,7 +136,7 @@ const Navbar = ({ title, className }) => {
               {navLinks.map((items) => {
                 return (
                   <>
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden" key={items.id}>
                       <motion.div
                         variants={mobileLinkVars}
                         initial="initial"
