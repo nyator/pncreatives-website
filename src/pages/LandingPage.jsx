@@ -65,6 +65,7 @@ const LandingPage = () => {
       </div>
 
       <section id="about" className="h-screen bg-primary"></section>
+      <section id="services" className="h-screen bg-blue"></section>
     </>
   );
 };

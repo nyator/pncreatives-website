@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { HashLink as HashLink} from "react-router-hash-link";
 
 import { styles } from "../constants/index.js";
 import { logo } from "../constants/assets.js";
@@ -8,8 +9,8 @@ import { CgMenuMotion } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 const navLinks = [
-  { title: "Services", href: "/", id: 1 },
-  { title: "About Us", href: "/#about", id: 2 },
+  { title: "Services", href: "#services", id: 1 },
+  { title: "About Us", href: "#about", id: 2 },
   { title: "Portfolio", href: "/portfolio", id: 3 },
 ];
 
@@ -77,15 +78,25 @@ const Navbar = ({ title, className }) => {
           <img src={logo} alt="pncreatives" className="size-8" />
         </Link>
         <div className="hidden md:flex space-x-[60px] bg-gray py-3 px-5 font-cMedium text-navblack text-[13px] rounded-full">
-          {navLinks.map((items) => {
-            return (
-              <div key={items.id}>
+          {/* {navLinks.map((items) => {
+            return ( */}
+              {/* <div key={items.id}> */}
                 <li className="list-none text-[12px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
-                  <Link to={items.href}>{items.title}</Link>
+                  <HashLink to={'#services'}>Services</HashLink>
                 </li>
-              </div>
-            );
-          })}
+                <li className="list-none text-[12px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
+                  <Link to={'/'}>
+                  {/* <HashLink to={'#about'}> */}
+                    About Us
+                    {/* </HashLink> */}
+                  </Link>
+                </li>
+                <li className="list-none text-[12px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
+                  <Link to={'/portfolio'}>Portfolio</Link>
+                </li>
+              {/* </div> */}
+            {/* );
+          })} */}
         </div>
 
         <button className="hidden md:flex bg-secondary-default py-2 px-5 font-cMedium text-navblack text-[15px] rounded-full ">
