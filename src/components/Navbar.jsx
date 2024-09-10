@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { HashLink as HashLink} from "react-router-hash-link";
 
-import { styles } from "../constants/index.js";
+import { styles } from "../constants/styles.js";
 import { logo } from "../constants/assets.js";
 import { CgMenuMotion } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
