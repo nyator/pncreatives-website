@@ -81,17 +81,17 @@ const Navbar = ({ title, className }) => {
           {/* {navLinks.map((items) => {
             return ( */}
               {/* <div key={items.id}> */}
-                <li className="list-none text-[12px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
+                <li className="list-none text-[13px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
                   <HashLink to={'#services'}>Services</HashLink>
                 </li>
-                <li className="list-none text-[12px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
+                <li className="list-none text-[13px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
                   <Link to={'/'}>
                   {/* <HashLink to={'#about'}> */}
                     About Us
                     {/* </HashLink> */}
                   </Link>
                 </li>
-                <li className="list-none text-[12px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
+                <li className="list-none text-[13px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
                   <Link to={'/portfolio'}>Portfolio</Link>
                 </li>
               {/* </div> */}
