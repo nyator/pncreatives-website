@@ -68,8 +68,8 @@ const LandingPage = () => {
 
 
       <section className="bg-gradient-to-bl from-primary to-black h-screen border-dashed  border-white border-t-4 border-b-4">
-        <div id="about" className="w-9/12 md:w-4/6 mx-auto my-24 content-evenly space-y-[3rem bg-green-300">
-        <div className="flex flex-col md:flex-row items-center bg-red-500 gap-2 md:gap-10">
+        <div id="about" className="w-9/12 md:w-4/6 mx-auto my-24 content-evenly space-y-[3rem]">
+        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-10">
           <Title title="Services" className="text-white"/>
           <div className="flex gap-2 flex-wrap justify-center md:justify-start">
           {services.map((items) => {
