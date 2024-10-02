@@ -154,7 +154,7 @@ const Navbar = ({ title, className }) => {
                 <Link to="">Contact US</Link>
               </button>
               <p className="font-cLight tracking-widest absolute bottom-10 z-10 text-[#a8a7a7] text-[12px] ">
-                ©PNCREATIVES
+                ©PNCREATIVESGH
               </p>
             </motion.div>
           </motion.div>
