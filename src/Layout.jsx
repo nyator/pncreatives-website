@@ -1,4 +1,5 @@
 import Navbar from "../src/components/Navbar";
+import Footer from "../src/components/Footer";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
@@ -9,6 +10,9 @@ const Layout = () => {
           <Navbar title="" />
         </div>
         <Outlet />
+        {/* <div className="w-9/12 md:w-4/6 mx-auto"> */}
+          <Footer /> 
+        {/* </div> */}
       </main>
     </>
   );

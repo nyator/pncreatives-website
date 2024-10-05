@@ -16,7 +16,7 @@ const LandingPage = () => {
   return (
     <>
       <section className="bg-hero-pattern">
-        <div className="text-primary font-cVariable w-9/12 md:w-4/6 mx-auto h-screen justify-center items-center content-evenly space-y-[3rem]">
+        <div className="text-primary font-cVariable w-9/12 md:w-4/6 mx-auto min-h-screen justify-center items-center content-evenly space-y-[3rem]">
           <div className="leading-none font-cRegular line-clamp-[7]">
             <h1 className="text-clamp text-start relative">
               Refresh Your
@@ -67,7 +67,7 @@ const LandingPage = () => {
 
       <section
         id="services"
-        className="bg-gradient-to-bl from-primary to-black h-screen border-dashed border-white border-t-4 border-b-4"
+        className="bg-gradient-to-bl from-primary to-black h-screen border-dashed border-[#EBEBEB] border-t-4 border-b-4"
       >
         <div className="w-9/12 md:w-4/6 mx-auto py-24 content-evenly space-y-[3rem]">
           {/* <div className="flex flex-col md:flex-row items-center gap-2 md:gap-10"> */}
@@ -83,7 +83,9 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="services" className="h-full bg-[#EBEBEB]">
+      <section 
+      id="about" 
+      className="h-full bg-[#EBEBEB]">
         <div className="w-9/12 md:w-4/6 mx-auto py-24 content-evenly space-y-[3rem]">
           <Title title="About Us" className="text-primary" icon={underline2} />
 

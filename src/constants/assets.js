@@ -7,6 +7,9 @@ import lRectangle from '../assets/images/lRectangle.svg'
 import rRectangle from '../assets/images/rRectangle.svg'
 import hireus from '../assets/images/hireus.svg'
 import under from '../assets/images/group.png'
+import ig from '../assets/images/ig.svg'
+import behance from '../assets/images/behance.svg'
+import linkedin from '../assets/images/linkedin.svg'
 
 export {
     logo,
@@ -17,5 +20,8 @@ export {
     lRectangle,
     rRectangle,
     hireus,
-    under
+    under,
+    ig,
+    behance,
+    linkedin,
 }

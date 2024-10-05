@@ -74,24 +74,24 @@ const Navbar = ({ title, className }) => {
           title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`
         }  ${className}  flex font-cVariable w-9/12 md:w-4/6 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full fixed z-10`}
       >
-        <Link to="/">
+        <Link to="#home">
           <img src={logo} alt="pncreatives" className="size-8" />
         </Link>
-        <div className="hidden md:flex space-x-[60px] bg-gray py-3 px-5 font-cMedium text-navblack text-[13px] rounded-full">
+        <div className="hidden md:flex space-x-[60px] bg-[#fafafa65] py-3 px-5 rounded-full">
           {/* {navLinks.map((items) => {
             return ( */}
               {/* <div key={items.id}> */}
-                <li className="list-none text-[13px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
+                <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
                   <HashLink to={'#services'}>Services</HashLink>
                 </li>
-                <li className="list-none text-[13px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
-                  <Link to={'/'}>
+                <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
+                  <Link to={'#about'}>
                   {/* <HashLink to={'#about'}> */}
                     About Us
                     {/* </HashLink> */}
                   </Link>
                 </li>
-                <li className="list-none text-[13px] text-navblack hover:text-primary transition-all duration-300 ease-in-out">
+                <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
                   <Link to={'/portfolio'}>Portfolio</Link>
                 </li>
               {/* </div> */}
