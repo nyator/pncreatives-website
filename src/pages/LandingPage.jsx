@@ -67,8 +67,8 @@ const LandingPage = () => {
 
 
 
-      <section id="services" className="bg-gradient-to-bl from-primary to-black h-screen border-dashed  border-white border-t-4 border-b-4">
-        <div className="w-9/12 md:w-4/6 mx-auto my-24 content-evenly space-y-[3rem]">
+      <section id="services" className="bg-gradient-to-bl from-primary to-black h-screen border-dashed border-white border-t-4 border-b-4">
+        <div className="w-9/12 md:w-4/6 mx-auto py-24 content-evenly space-y-[3rem]">
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-10">
           <Title title="Services" className="text-white"/>
           <div className="flex gap-2 flex-wrap justify-center md:justify-start">
@@ -83,7 +83,17 @@ const LandingPage = () => {
       </section>
 
 
-      <section id="about" className="h-screen bg-white"></section>
+
+      <section id="services" className="h-screen bg-[#EBEBEB]">
+        <div className="w-9/12 md:w-4/6 mx-auto py-24 content-evenly space-y-[3rem]">
+        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-10">
+          <Title title="About Us" className="text-primary"/>
+          
+        </div>
+        </div>
+      </section>
+
+      
     </>
   );
 };
