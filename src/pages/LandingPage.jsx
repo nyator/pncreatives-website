@@ -10,9 +10,7 @@ import {
   underline2,
 } from "../constants/assets.js";
 
-
 import { services } from "../constants/index.js";
-
 
 const LandingPage = () => {
   return (
@@ -67,12 +65,13 @@ const LandingPage = () => {
         </div>
       </section>
 
-
-
-      <section id="services" className="bg-gradient-to-bl from-primary to-black h-screen border-dashed border-white border-t-4 border-b-4">
+      <section
+        id="services"
+        className="bg-gradient-to-bl from-primary to-black h-screen border-dashed border-white border-t-4 border-b-4"
+      >
         <div className="w-9/12 md:w-4/6 mx-auto py-24 content-evenly space-y-[3rem]">
-        {/* <div className="flex flex-col md:flex-row items-center gap-2 md:gap-10"> */}
-          <Title title="Services" className="text-white" icon={underline}/>
+          {/* <div className="flex flex-col md:flex-row items-center gap-2 md:gap-10"> */}
+          <Title title="Services" className="text-white" icon={underline} />
           {/* <div className="flex gap-2 flex-wrap justify-center md:justify-start">
           {services.map((items) => {
             return (
@@ -80,22 +79,50 @@ const LandingPage = () => {
             )
           })}
           </div> */}
-        {/* </div> */}
+          {/* </div> */}
         </div>
       </section>
 
-
-
-      <section id="services" className="h-screen bg-[#EBEBEB]">
+      <section id="services" className="h-full bg-[#EBEBEB]">
         <div className="w-9/12 md:w-4/6 mx-auto py-24 content-evenly space-y-[3rem]">
-        {/* <div className="flex flex-col md:flex-row items-center gap-2 md:gap-10"> */}
-          <Title title="About Us" className="text-primary" icon={underline2}/>
-          
-        {/* </div> */}
+          <Title title="About Us" className="text-primary" icon={underline2} />
+
+          <div className="flex flex-col md:flex-row content-evenly gap-5">
+            <div className="font-cRegular w-full md:w-10/12 text-clamp_text space-y-[0.5rem]">
+              <h1>
+                At <span className="font-cMedium">PN Creatives </span>, your
+                one-stop creative powerhouse. We are a dynamic team of
+                passionate creatives dedicated to helping businesses like yours
+                shine in the digital landscape.
+              </h1>
+              <h1>
+                we work closely with you to develop customized solutions that
+                elevate your business and leave a lasting impression on your
+                target audience.
+              </h1>
+              <h1>
+                Ready to take your brand to new heights? Contact us today, and
+                let's start collaborating!
+              </h1>
+            </div>
+
+            <div className="text-clamp_text leading-7">
+              <h1 className="font-cRegular mb-0 md:mb-4">
+                Our expertise encompasses a wide range of services, including:
+              </h1>
+              {services.map((items) => {
+                return (
+                  <div className="pl-10">
+                    <ul className="list-disc font-cMedium" key={items.id}>
+                      <li>{items.title}</li>
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
-
-      
     </>
   );
 };
