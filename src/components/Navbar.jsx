@@ -99,7 +99,7 @@ const Navbar = ({ title, className }) => {
           })} */}
         </div>
 
-        <button className="hidden md:flex bg-secondary-default py-2 px-5 font-cMedium text-navblack text-[15px] rounded-full ">
+        <button className="hidden md:flex  hover:text-primary bg-secondary-default py-2 px-5 font-cMedium text-navblack text-[15px] rounded-full transition-all duration-200 ease-linear">
           <a href="">Contact US</a>
         </button>
 
