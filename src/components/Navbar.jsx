@@ -72,7 +72,7 @@ const Navbar = ({ title, className }) => {
       <div
         className={`${
           title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`
-        }  ${className}  flex font-cVariable w-9/12 md:w-4/6 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full fixed z-10`}
+        }  ${className}  flex font-cVariable w-9/12 md:w-4/6 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full fixed z-10 `}
       >
         <Link to="/">
           <img src={logo} alt="pncreatives" className="size-8" />
@@ -81,13 +81,13 @@ const Navbar = ({ title, className }) => {
           {/* {navLinks.map((items) => {
             return ( */}
           {/* <div key={items.id}> */}
-          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
+          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-500 ease-in-out">
             <HashLink to={"/#services"}>Services</HashLink>
           </li>
-          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
+          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-500 ease-in-out">
             <HashLink to={"/#about"}>About Us</HashLink>
           </li>
-          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
+          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-500 ease-in-out">
             <Link to={"/portfolio"}>Portfolio</Link>
           </li>
           {/* </div> */}
