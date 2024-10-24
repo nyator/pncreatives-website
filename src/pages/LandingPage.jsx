@@ -114,8 +114,8 @@ const LandingPage = () => {
               </h1>
               {services.map((items) => {
                 return (
-                  <div className="pl-10">
-                    <ul className="list-disc font-cMedium" key={items.id}>
+                  <div key={items.id} className="pl-10">
+                    <ul className="list-disc font-cMedium">
                       <li>{items.title}</li>
                     </ul>
                   </div>
