@@ -7,7 +7,7 @@ const Layout = () => {
     <>
       <main>
         <div className="w-9/12 md:w-4/6 mx-auto">
-          <Navbar title="" />
+          <Navbar title="Portfoli"/>
         </div>
         <Outlet />
         {/* <div className="w-9/12 md:w-4/6 mx-auto"> */}

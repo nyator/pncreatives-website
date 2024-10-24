@@ -72,15 +72,12 @@ const Navbar = ({ title, className }) => {
       <div
         className={`${
           title === "Portfolio" ? `${styles.navop}` : `${styles.navBlur}`
-        }  ${className}  flex font-cVariable w-9/12 md:w-4/6 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full fixed z-10 `}
+        }  ${className}  flex font-cVariable w-9/12 md:w-4/6 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full z-10 `}
       >
         <Link to="/">
           <img src={logo} alt="pncreatives" className="size-8" />
         </Link>
         <div className="hidden md:flex space-x-[60px] bg-[#fafafa65] py-3 px-5 rounded-full">
-          {/* {navLinks.map((items) => {
-            return ( */}
-          {/* <div key={items.id}> */}
           <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-500 ease-in-out">
             <HashLink to={"/#services"}>Services</HashLink>
           </li>
@@ -90,9 +87,6 @@ const Navbar = ({ title, className }) => {
           <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-500 ease-in-out">
             <Link to={"/portfolio"}>Portfolio</Link>
           </li>
-          {/* </div> */}
-          {/* );
-          })} */}
         </div>
 
         <button className="hidden md:flex  hover:text-primary bg-secondary-default py-2 px-5 font-cMedium text-navblack text-[15px] rounded-full transition-all duration-200 ease-linear">
@@ -131,27 +125,25 @@ const Navbar = ({ title, className }) => {
             >
               {navLinks.map((items) => {
                 return (
-                
-                    <div className="overflow-hidden" key={items.id}>
-                      <motion.div
-                        variants={mobileLinkVars}
-                        initial="initial"
-                        animate="open"
-                        key={items.id}
-                        className="list-none flex justify-center items-center w-fit font-cVariable text-[3rem] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
-                      >
-                        <HashLink to={items.href} onClick={toggleMenu}>
-                          {" "}
-                          {items.title}{" "}
-                        </HashLink>
+                  <div className="overflow-hidden" key={items.id}>
+                    <motion.div
+                      variants={mobileLinkVars}
+                      initial="initial"
+                      animate="open"
+                      key={items.id}
+                      className="list-none flex justify-center items-center w-fit font-cVariable text-[3rem] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
+                    >
+                      <HashLink to={items.href} onClick={toggleMenu}>
+                        {" "}
+                        {items.title}{" "}
+                      </HashLink>
 
-                        {/* <Link to={items.href} onClick={toggleMenu}>
+                      {/* <Link to={items.href} onClick={toggleMenu}>
                           {" "}
                           {items.title}{" "}
                         </Link> */}
-                      </motion.div>
-                    </div>
-                  
+                    </motion.div>
+                  </div>
                 );
               })}
               <button className="bg-secondary-yray py-2 px-5 font-cMedium text-navblack text-[20px] rounded-full border-secondary-default border-2 hover:scale-150 hover:bg-secondary-default hover:border-2 hover:border-dashed hover:border-white transition-all duration-500 ease-in-out ">
