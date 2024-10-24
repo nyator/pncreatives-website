@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { HashLink as HashLink} from "react-router-hash-link";
+import { HashLink as HashLink } from "react-router-hash-link";
 
 import { styles } from "../constants/styles.js";
 import { logo } from "../constants/assets.js";
@@ -9,8 +9,8 @@ import { CgMenuMotion } from "react-icons/cg";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 const navLinks = [
-  { title: "Services", href: "#services", id: 1 },
-  { title: "About Us", href: "#about", id: 2 },
+  { title: "Services", href: "/#services", id: 1 },
+  { title: "About Us", href: "/#about", id: 2 },
   { title: "Portfolio", href: "/portfolio", id: 3 },
 ];
 
@@ -80,27 +80,23 @@ const Navbar = ({ title, className }) => {
         <div className="hidden md:flex space-x-[60px] bg-[#fafafa65] py-3 px-5 rounded-full">
           {/* {navLinks.map((items) => {
             return ( */}
-              {/* <div key={items.id}> */}
-                <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
-                  <HashLink to={'/#services'}>Services</HashLink>
-                </li>
-                <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
-                  <Link to={'/#about'}>
-                  {/* <HashLink to={'#about'}> */}
-                    About Us
-                    {/* </HashLink> */}
-                  </Link>
-                </li>
-                <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
-                  <Link to={'/portfolio'}>Portfolio</Link>
-                </li>
-              {/* </div> */}
-            {/* );
+          {/* <div key={items.id}> */}
+          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
+            <HashLink to={"/#services"}>Services</HashLink>
+          </li>
+          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
+            <HashLink to={"/#about"}>About Us</HashLink>
+          </li>
+          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-300 ease-in-out">
+            <Link to={"/portfolio"}>Portfolio</Link>
+          </li>
+          {/* </div> */}
+          {/* );
           })} */}
         </div>
 
         <button className="hidden md:flex  hover:text-primary bg-secondary-default py-2 px-5 font-cMedium text-navblack text-[15px] rounded-full transition-all duration-200 ease-linear">
-          <a href="">Contact US</a>
+          <a href="mailto:example@gmail.com">Contact US</a>
         </button>
 
         <button className="md:hidden" onClick={toggleMenu}>
@@ -117,8 +113,8 @@ const Navbar = ({ title, className }) => {
             className="fixed md:hidden h-screen w-full origin-top left-0 top-0 bg-white z-20"
           >
             <div className="flex w-9/12 mx-auto justify-between items-center pl-8 pr-4 py-3 mt-5 rounded-full">
-              <Link to="/" onClick={toggleMenu} >
-                <img src={logo} alt="pnCreatives" className="size-8"/>
+              <Link to="/" onClick={toggleMenu}>
+                <img src={logo} alt="pnCreatives" className="size-8" />
               </Link>
 
               <button className="md:hidden" onClick={toggleMenu}>
@@ -144,7 +140,15 @@ const Navbar = ({ title, className }) => {
                         key={items.id}
                         className="list-none flex justify-center items-center w-fit font-cVariable text-[3rem] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
                       >
-                        <Link to={items.href} onClick={toggleMenu}> {items.title} </Link>
+                        <HashLink to={items.href} onClick={toggleMenu}>
+                          {" "}
+                          {items.title}{" "}
+                        </HashLink>
+
+                        {/* <Link to={items.href} onClick={toggleMenu}>
+                          {" "}
+                          {items.title}{" "}
+                        </Link> */}
                       </motion.div>
                     </div>
                   </>

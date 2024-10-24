@@ -16,7 +16,7 @@ export const services = [
     },
     {
         id: 4,
-        title:'Photo/Videography',
+        title:'Photo/Video',
         description: 'Bring your spaces to life with our immersive virtual tours. Whether it is a retail store, an office, or an event venue, we will create an engaging 360-degree experience that captivates your audience and drives real results.',
     },
     {
