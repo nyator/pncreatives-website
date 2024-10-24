@@ -131,7 +131,7 @@ const Navbar = ({ title, className }) => {
             >
               {navLinks.map((items) => {
                 return (
-                  <>
+                
                     <div className="overflow-hidden" key={items.id}>
                       <motion.div
                         variants={mobileLinkVars}
@@ -151,7 +151,7 @@ const Navbar = ({ title, className }) => {
                         </Link> */}
                       </motion.div>
                     </div>
-                  </>
+                  
                 );
               })}
               <button className="bg-secondary-yray py-2 px-5 font-cMedium text-navblack text-[20px] rounded-full border-secondary-default border-2 hover:scale-150 hover:bg-secondary-default hover:border-2 hover:border-dashed hover:border-white transition-all duration-500 ease-in-out ">
