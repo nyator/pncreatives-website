@@ -90,7 +90,7 @@ const Navbar = ({ title, className }) => {
         </div>
 
         <button className="hidden md:flex  hover:text-primary bg-secondary-default py-2 px-5 font-cMedium text-navblack text-[15px] rounded-full transition-all duration-200 ease-linear">
-          <a href="mailto:example@gmail.com">Contact US</a>
+        <Link to="">Book A Service</Link>
         </button>
 
         <button className="md:hidden" onClick={toggleMenu}>
@@ -147,7 +147,7 @@ const Navbar = ({ title, className }) => {
                 );
               })}
               <button className="bg-secondary-yray py-2 px-5 font-cMedium text-navblack text-[20px] rounded-full border-secondary-default border-2 hover:scale-150 hover:bg-secondary-default hover:border-2 hover:border-dashed hover:border-white transition-all duration-500 ease-in-out ">
-                <Link to="">Contact US</Link>
+                <Link to="">BOOK A SERVICE</Link>
               </button>
               <p className="font-cLight tracking-widest absolute bottom-10 z-10 text-[#a8a7a7] text-[12px] ">
                 ©PNCREATIVESGH
