@@ -78,13 +78,13 @@ const Navbar = ({ title, className }) => {
           <img src={logo} alt="pncreatives" className="size-8" />
         </Link>
         <div className="hidden md:flex space-x-[60px] bg-[#fafafa65] py-3 px-5 rounded-full">
-          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-500 ease-in-out">
+          <li className="list-none text-clamp_desc text-navblack font-cMedium hover:text-primary transition-all duration-500 ease-in-out">
             <HashLink to={"/#services"}>Services</HashLink>
           </li>
-          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-500 ease-in-out">
+          <li className="list-none text-clamp_desc text-navblack font-cMedium hover:text-primary transition-all duration-500 ease-in-out">
             <HashLink to={"/#about"}>About Us</HashLink>
           </li>
-          <li className="list-none text-clamp_desc text-navblack hover:text-primary hover:font-cMedium transition-all duration-500 ease-in-out">
+          <li className="list-none text-clamp_desc text-navblack font-cMedium hover:text-primary transition-all duration-500 ease-in-out">
             <Link to={"/portfolio"}>Portfolio</Link>
           </li>
         </div>
