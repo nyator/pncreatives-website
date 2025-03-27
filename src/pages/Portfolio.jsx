@@ -25,6 +25,9 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+      <section className={`text-white`}>
+      </section>
+
     </>
   );
 };
