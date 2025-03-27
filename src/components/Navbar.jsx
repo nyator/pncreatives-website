@@ -90,13 +90,14 @@ const Navbar = ({ title, className }) => {
         </div>
 
         <button className="hidden md:flex  hover:text-primary bg-secondary-default py-2 px-5 font-cMedium text-navblack text-[15px] rounded-full transition-all duration-200 ease-linear">
-        <Link to="">Book A Service</Link>
+          <Link to="">Book A Service</Link>
         </button>
 
         <button className="md:hidden" onClick={toggleMenu}>
           <CgMenuMotion className="size-7 text-primary" />
         </button>
       </div>
+    
       <AnimatePresence>
         {open && (
           <motion.div
