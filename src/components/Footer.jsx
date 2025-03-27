@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
 
             <div>
-                <p className="text-white font-cRegular text-clamp_desc text-center text-nowrap ">© 2024 PN Creatives | All Rights Reserved</p>
+                <p className="text-white font-cRegular text-clamp_desc text-center text-nowrap ">© 2025 PN Creatives | All Rights Reserved</p>
             </div>
         </div>
 

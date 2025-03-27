@@ -24,10 +24,13 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+        <div
+          className={` flex  flex-col w-full h-svh justify-center  items-center text-center text-secondary-default animate-pulse leading-none text-clamp_desc md:text-clamp_2 font-cRegular`}
+        >
+          <p className="text-clamp_title font-cSemibold">PAGE COMING SOON</p>
+          <p className="text-clamp_name font-cSemibold">Under Construction</p>
+        </div>
       </section>
-      <section className={`text-white`}>
-      </section>
-
     </>
   );
 };
