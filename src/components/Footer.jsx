@@ -5,7 +5,7 @@ import { ig, linkedin, behance } from "../constants/assets";
 
 const Footer = () => {
   return (
-    <div className="bg-primary p-12 border-dashed border-[#EBEBEB] border-t-4">
+    <div className="bg-primary p-12 border-dashed border-[#EBEBEB] border-t-4 relative">
       <div className="px-28 mx-auto flex flex-col md:flex-row gap-3 items-center justify-between content-center ">
         <div className=" text-center md:text-start text-nowrap ">
           <p className="text-white font-cRegular text-clamp_desc">
@@ -39,8 +39,10 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="w-full bg-red-500 h-fit flex justify-center text-center text-white animate-pulse text-clamp_desc md:text-clamp_2 font-cRegular rounded-xl mt-10">
-        <p>Site is under Construction</p>
+      <div className="flex justify-center items-center">
+        <p className=" bottom-5 fixed w-4/5 bg-red-500 h-fit text-center text-white animate-pulse text-clamp_desc md:text-clamp_2 font-cRegular rounded-xl mt-10">
+          Site is under Construction
+        </p>
       </div>
     </div>
   );
