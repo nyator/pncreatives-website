@@ -1,10 +1,12 @@
+import { visual } from "./assets";
+
 export const worksMap = {
   "Graphic Design": [
     {
       id: 1,
-      title: "Brand Identity for Acme Corp",
+      title: "Brand Identity for Hubtel",
       description: "A modern rebrand for Acme Corp including logo, color palette, and business cards.",
-      img: "/portfolio/graphic1.jpg",
+      img: visual,
     },
     {
       id: 2,
@@ -66,3 +68,4 @@ export const worksMap = {
     },
   ],
 };
+

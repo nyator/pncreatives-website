@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Title from "../components/Title.jsx";
 import { underline, underline2 } from "../constants/assets.js";
 import {
@@ -31,6 +31,19 @@ const LandingPage = () => {
 
   // Get the related content array for the active tab
   const relatedContent = serviceContentMap[activeTab];
+  const scrollRef = useRef(null);
+
+  // Scroll handler functions
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -350, behavior: "smooth" });
+    }
+  };
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -91,7 +104,6 @@ const LandingPage = () => {
         >
           <div className="w-10/12 md:w-5/6 mx-auto py-24 content-evenly space-y-[3rem]">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-10">
-              {/* <div className="flex flex-col md:flex-row gap-2 md:gap-10 md:items-center justify-between"> */}
               <Title title="Services" className="text-white" icon={underline} />
               <div className="flex gap-2 flex-wrap">
                 {services.map((item) => (
@@ -108,12 +120,14 @@ const LandingPage = () => {
                     {item.title}
                   </button>
                 ))}
-                {/* </div> */}
               </div>
             </div>
             {/* Show related content cards */}
             {relatedContent && relatedContent.length > 0 && (
-              <div className="flex gap-8 mt-8 overflow-x-auto scroll-smooth ">
+              <div
+                ref={scrollRef}
+                className="flex gap-8 mt-8 overflow-x-auto scroll-smooth"
+              >
                 {relatedContent.map((item) => (
                   <div
                     key={item.id}
@@ -147,13 +161,13 @@ const LandingPage = () => {
               </div>
             )}
             <div className="text-white flex items-center justify-center gap-2">
-              <span>
+              <span onClick={scrollLeft} className="cursor-pointer">
                 <TbArrowMoveLeft className="text-3xl" />
               </span>
               <span>
                 <CgBorderTop className="text-3xl mt-4" />
               </span>
-              <span>
+              <span onClick={scrollRight} className="cursor-pointer">
                 <TbArrowMoveRight className="text-3xl" />
               </span>
             </div>
@@ -163,10 +177,7 @@ const LandingPage = () => {
 
       <section id="about" className="h-full bg-[#EBEBEB]">
         <div className="w-10/12 md:w-5/6 mx-auto py-24 content-evenly space-y-[3rem]">
-          {/* <div className=" flex items-start bg-black w-full"> */}
           <Title title="About Us" className="text-primary" icon={underline2} />
-          {/* </div> */}
-
           <div className="flex flex-col md:flex-row content-evenly gap-5">
             <div className="font-cRegular w-full md:w-10/12 text-clamp_text space-y-[0.5rem]">
               <h1>

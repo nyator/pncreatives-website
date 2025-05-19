@@ -13,6 +13,7 @@ import linkedin from '../assets/images/linkedin.svg'
 import tt from '../assets/images/tt.jpg'
 
 import unsplash from '../assets/services/unsplash.jpg'
+import visual from '../assets/projects/Visual-Identity-design-logos-layout-color-font.png'
 
 export {
     logo,
@@ -30,4 +31,5 @@ export {
     tt,
 
     unsplash,
+    visual,
 }

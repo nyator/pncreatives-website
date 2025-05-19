@@ -11,7 +11,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 const navLinks = [
   { title: "Services", href: "/#services", id: 1 },
   { title: "About Us", href: "/#about", id: 2 },
-  { title: "Portfolio", href: "/portfolio", id: 3 },
+  { title: "works", href: "/works", id: 3 },
 ];
 
 const Navbar = ({ title, className }) => {
@@ -85,7 +85,7 @@ const Navbar = ({ title, className }) => {
             <HashLink to={"/#about"}>About Us</HashLink>
           </li>
           <li className="list-none  text-navblack font-cMedium hover:text-primary transition-all duration-500 ease-in-out">
-            <Link to={"/portfolio"}>Portfolio</Link>
+            <Link to={"/works"}>works</Link>
           </li>
         </div>
 

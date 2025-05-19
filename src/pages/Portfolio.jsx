@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Title from "../components/Title";
-import { underline } from "../constants/assets.js";
+import { underline2 } from "../constants/assets.js";
 import { services } from "../constants/index.js";
 import { TbArrowMoveLeft, TbArrowMoveRight } from "react-icons/tb";
 import { CgBorderTop } from "react-icons/cg";
@@ -9,14 +9,27 @@ import { worksMap } from "../constants/works.js";
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState(services[0]?.title);
   const works = worksMap[activeTab] || [];
+  const scrollRef = useRef(null);
+
+  // Scroll handler functions
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -350, behavior: "smooth" });
+    }
+  };
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
       <section className="bg-gradient-to-bl from-primary to-black min-h-screen">
         <div className="w-10/12 md:w-5/6 mx-auto py-24 content-evenly space-y-[3rem]">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-10">
-            <Title title="Portfolio" className="text-white" icon={underline} />
-
+          {/* Title and tab buttons only, not fixed */}
+          <div className="flex flex-col md:flex-row md:items-center justify-evenly gap-2 md:gap-8 mb-8">
+            <Title title="Works" className="text-white" icon={underline2} />
             <div className="flex gap-2 flex-wrap">
               {services.map((item) => (
                 <button
@@ -36,7 +49,10 @@ const Portfolio = () => {
           </div>
           {/* Show works as horizontal scroll cards */}
           {works.length > 0 ? (
-            <div className="flex gap-8 mt-8 overflow-x-auto md:pb-4 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+            <div
+              ref={scrollRef}
+              className="flex gap-8 mt-8 overflow-x-auto md:pb-4 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100"
+            >
               {works.map((work) => (
                 <div
                   key={work.id}
@@ -66,16 +82,16 @@ const Portfolio = () => {
             </div>
           )}
           <div className="text-white flex items-center justify-center gap-2">
-              <span>
-                <TbArrowMoveLeft className="text-3xl" />
-              </span>
-              <span>
-                <CgBorderTop className="text-3xl mt-4" />
-              </span>
-              <span>
-                <TbArrowMoveRight className="text-3xl" />
-              </span>
-            </div>
+            <span onClick={scrollLeft} className="cursor-pointer">
+              <TbArrowMoveLeft className="text-3xl" />
+            </span>
+            <span>
+              <CgBorderTop className="text-3xl mt-4" />
+            </span>
+            <span onClick={scrollRight} className="cursor-pointer">
+              <TbArrowMoveRight className="text-3xl" />
+            </span>
+          </div>
         </div>
       </section>
     </>
