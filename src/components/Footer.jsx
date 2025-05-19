@@ -14,7 +14,7 @@ const Footer = () => {
           </p>
           <p className="text-white font-cRegular text-clamp_desc">
             Email :
-            <Link className="text-[#FFE26C]"> pncreatives@gmail.com</Link>
+            <Link className="text-[#FFE26C]"> pncreativesgh@gmail.com</Link>
           </p>
           <p className="text-white font-cRegular text-clamp_desc">
             Tel :<Link className="text-[#FFE888]"> + 233 55 616 9432</Link>

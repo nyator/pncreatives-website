@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+
+
+
+
 @font-face {
   font-family: 'ClashDisplay-Extralight';
   src: url('../src/assets/fonts/ClashDisplay-Extralight.woff2') format('woff2'),

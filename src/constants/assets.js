@@ -12,6 +12,8 @@ import behance from '../assets/images/behance.svg'
 import linkedin from '../assets/images/linkedin.svg'
 import tt from '../assets/images/tt.jpg'
 
+import unsplash from '../assets/services/unsplash.jpg'
+
 export {
     logo,
     leftarrow,
@@ -26,4 +28,6 @@ export {
     behance,
     linkedin,
     tt,
+
+    unsplash,
 }

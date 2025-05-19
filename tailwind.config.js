@@ -41,7 +41,7 @@ export default {
         clamp_2: "clamp(8px, 1vw, 30px)",
         clamp_name: "clamp(20px, 2vw, 60px)",
         clamp_desc: "clamp(0.8rem, 1vw, 25px)",
-        clamp_text: "clamp(0.9rem, 2vw, 1.2rem)",
+        clamp_text: "clamp(1rem, 2vw, 1.2rem)",
         clamp_title: "clamp(1.5rem, 5vw, 3.75rem)",
         clamp_items: "clamp(9px, 1vw, 14px)",
       },
