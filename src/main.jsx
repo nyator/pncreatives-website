@@ -8,6 +8,7 @@ import LandingPage from "./pages/LandingPage.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Layout from "./Layout.jsx";
+import Booking from "./pages/Booking.jsx";
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/portfolio",
         element: <Portfolio />,
+      },
+      {
+        path: "/booking",
+        element: <Booking />,
       },
     ],
   },

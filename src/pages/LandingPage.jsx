@@ -1,11 +1,11 @@
 import Title from "../components/Title.jsx";
 import {
-  leftarrow,
-  rightarrow,
-  lRectangle,
-  rRectangle,
-  hireus,
-  logo,
+  // leftarrow,
+  // rightarrow,
+  // lRectangle,
+  // rRectangle,
+  // hireus,
+  // logo,
   underline,
   underline2,
 } from "../constants/assets.js";
@@ -20,9 +20,9 @@ const LandingPage = () => {
           <div className="leading-none font-cRegular line-clamp-[7]">
             <h1 className="text-clamp text-start relative">
               Refresh Your
-              <div className="bg-gradient-to-l from-white to-secondary-default absolute left-2/3 md:left-2/4 top-1/3 rounded-full p-[2px] -z-10">
+              <div className="bg-gradient-to-l from-white to-secondary-default absolute left-2/3 md:left-2/4 top-1/3 rounded-full p-[2px] z-10">
                 <p className="text-clamp_2 px-2 py-[1.5px] rounded-full bg-gradient-to-r from-white to-secondary-default text-nowrap">
-                  create'n space
+                  create&#39;n space
                 </p>
               </div>
             </h1>
@@ -65,23 +65,30 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/*<section*/}
-      {/*  id="services"*/}
-      {/*  className="bg-gradient-to-bl from-primary to-black h-screen border-dashed border-[#EBEBEB] border-t-4 border-b-4"*/}
-      {/*>*/}
-      {/*  <div className="w-9/12 md:w-4/6 mx-auto py-24 content-evenly space-y-[3rem]">*/}
-      {/*    <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-10">*/}
-      {/*    <Title title="Services" className="text-white" icon={underline} />*/}
-      {/*    <div className="flex gap-2 flex-wrap justify-center md:justify-start">*/}
-      {/*    {services.map((items) => {*/}
-      {/*      return (*/}
-      {/*        <p key={items.id} className="text-white/70 font-cRegular text-clamp_items bg-slate-100/50 border-slate-100/40 border-[1px] rounded-full px-3 text-center">{items.title}</p>*/}
-      {/*      )*/}
-      {/*    })}*/}
-      {/*    </div>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*</section>*/}
+      <section>
+       <section
+        id="services"
+        className="bg-gradient-to-bl from-primary to-black h-screen border-dashed border-[#EBEBEB] border-t-4 border-b-4"
+      >
+        <div className="w-9/12 md:w-4/6 mx-auto py-24 content-evenly space-y-[3rem]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-10">
+            <Title title="Services" className="text-white" icon={underline} />
+            <div className="flex gap-2 flex-wrap justify-center md:justify-start">
+              {services.map((items) => {
+                return (
+                  <p
+                    key={items.id}
+                    className="text-white/70 font-cRegular text-clamp_items bg-slate-100/50 border-slate-100/40 border-[1px] rounded-full px-3 text-center"
+                  >
+                    {items.title}
+                  </p>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+      </section>
 
       <section 
       id="about" 
@@ -104,7 +111,7 @@ const LandingPage = () => {
               </h1>
               <h1>
                 Ready to take your brand to new heights? Contact us today, and
-                let's start collaborating!
+                let&#39;s start collaborating!
               </h1>
             </div>
 

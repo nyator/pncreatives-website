@@ -10,6 +10,7 @@ import under from '../assets/images/group.png'
 import ig from '../assets/images/ig.svg'
 import behance from '../assets/images/behance.svg'
 import linkedin from '../assets/images/linkedin.svg'
+import tt from '../assets/images/tt.jpg'
 
 export {
     logo,
@@ -24,4 +25,5 @@ export {
     ig,
     behance,
     linkedin,
+    tt,
 }

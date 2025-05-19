@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HashLink as HashLink } from "react-router-hash-link";
+// import { HashLink as HashLink } from "react-router-hash-link";
 
 import { ig, linkedin, behance } from "../constants/assets";
 
@@ -39,11 +39,11 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center">
+      {/* <div className="flex justify-center items-center">
         <p className=" bottom-5 fixed w-4/5 bg-red-500 h-fit text-center text-white animate-pulse text-clamp_desc md:text-clamp_2 font-cRegular rounded-xl mt-10">
           Site is under Construction
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

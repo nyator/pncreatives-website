@@ -33,6 +33,7 @@ export default {
 
       backgroundImage: {
         'hero-pattern': "url(../src/assets/images/background.svg)",
+        'tt': "url(../src/assets/images/tt.jpg)",
       },
 
       fontSize: {
