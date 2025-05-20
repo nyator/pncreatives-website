@@ -9,8 +9,8 @@ const Footer = () => {
       <div className="px-28 mx-auto flex flex-col md:flex-row gap-3 items-center justify-between content-center ">
         <div className=" text-center md:text-start text-nowrap ">
           <p className="text-white font-cRegular text-clamp_desc">
-            Follow us on <Link className="text-[#FFDB4B]">Instagram</Link> and{" "}
-            <Link className="text-[#FFDB4B]">Behance</Link>
+            Follow us on <Link to="https://www.linkedin.com/" className="text-[#FFDB4B]">Linkedin</Link> and{" "}
+            <Link to="https://www.behance.net/" className="text-[#FFDB4B]">Behance</Link>
           </p>
           <p className="text-white font-cRegular text-clamp_desc">
             Email :
@@ -22,13 +22,13 @@ const Footer = () => {
         </div>
 
         <div className="flex gap-2.5 md:gap-5">
-          <Link to="">
+          <a href="https://www.instagram.com/" target="blank">
             <img src={ig} className="object-contain" alt="instagram" />
-          </Link>
-          <Link to="">
+          </a>
+          <a href="https://www.behance.net/" target="blank">
             <img src={behance} className="object-contain" alt="Behance" />
-          </Link>
-          <Link to="">
+          </a>
+          <Link to="https://www.linkedin.com/" target="blank" >
             <img src={linkedin} className="object-contain" alt="linkedin" />
           </Link>
         </div>
