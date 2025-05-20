@@ -14,6 +14,7 @@ import tt from '../assets/images/tt.jpg'
 
 import unsplash from '../assets/services/unsplash.jpg'
 import visual from '../assets/projects/Visual-Identity-design-logos-layout-color-font.png'
+import brand from '../assets/projects/brand-identity-design-service.jpg'
 
 export {
     logo,
@@ -32,4 +33,5 @@ export {
 
     unsplash,
     visual,
+    brand,
 }

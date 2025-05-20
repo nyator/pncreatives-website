@@ -79,10 +79,14 @@ const Navbar = ({ title, className }) => {
         </Link>
         <div className="hidden md:flex space-x-[50px] lg:space-x-[70px] bg-[#fafafa65] py-3 px-5 rounded-full">
           <li className="list-none  text-navblack font-cMedium hover:text-primary transition-all duration-500 ease-in-out">
-            <HashLink to={"/#services"}>Services</HashLink>
+            <HashLink to={"/#services"} smooth>
+              Services
+            </HashLink>
           </li>
           <li className="list-none  text-navblack font-cMedium hover:text-primary transition-all duration-500 ease-in-out">
-            <HashLink to={"/#about"}>About Us</HashLink>
+            <HashLink to={"/#about"} smooth>
+              About Us
+            </HashLink>
           </li>
           <li className="list-none  text-navblack font-cMedium hover:text-primary transition-all duration-500 ease-in-out">
             <Link to={"/works"}>works</Link>
@@ -134,7 +138,7 @@ const Navbar = ({ title, className }) => {
                       key={items.id}
                       className="list-none flex justify-center items-center w-fit font-cVariable text-[3rem] text-navblack hover:text-primary transition-all duration-300 ease-in-out"
                     >
-                      <HashLink to={items.href} onClick={toggleMenu}>
+                      <HashLink to={items.href} smooth onClick={toggleMenu}>
                         {" "}
                         {items.title}{" "}
                       </HashLink>

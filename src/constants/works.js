@@ -1,4 +1,4 @@
-import { visual } from "./assets";
+import { visual, brand } from "./assets";
 
 export const worksMap = {
   "Graphic Design": [
@@ -20,7 +20,7 @@ export const worksMap = {
       id: 1,
       title: "Book Layout: 'The Journey'",
       description: "Interior and cover design for a best-selling novel.",
-      img: "/portfolio/publishing1.jpg",
+      img: brand,
     },
     {
       id: 2,
