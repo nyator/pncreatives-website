@@ -14,14 +14,14 @@ const Footer = () => {
           </p>
           <p className="text-white font-cRegular text-clamp_desc">
             Email :
-            <Link className="text-[#FFE26C]"> pncreativesgh@gmail.com</Link>
+            <a href="mailto:pncreativesgh@gmail.com<" className="text-[#FFE26C]">pncreativesgh@gmail.com</a>
           </p>
           <p className="text-white font-cRegular text-clamp_desc">
-            Tel :<Link className="text-[#FFE888]"> + 233 55 616 9432</Link>
+            Tel :<a href="tel:+233556169432" className="text-[#FFE888]"> + 233 55 616 9432</a>
           </p>
         </div>
 
-        <div className="flex gap-1 md:gap-5">
+        <div className="flex gap-2.5 md:gap-5">
           <Link to="">
             <img src={ig} className="object-contain" alt="instagram" />
           </Link>

@@ -27,7 +27,7 @@ const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title>Portfolio | PN Creatives</title>
+        <title>Works | PN Creatives</title>
       </Helmet>
       <section className="bg-gradient-to-bl from-primary to-black min-h-screen">
         <div className="w-10/12 md:w-5/6 mx-auto py-24 content-evenly space-y-[3rem]">
@@ -88,13 +88,21 @@ const Portfolio = () => {
             </div>
           )}
           <div className="text-white flex items-center justify-center gap-2">
-            <span onClick={scrollLeft} className="cursor-pointer">
+            <span
+              onClick={scrollLeft}
+              className="cursor-pointer"
+              title="Scroll Left"
+            >
               <TbArrowMoveLeft className="text-3xl" />
             </span>
             <span>
               <CgBorderTop className="text-3xl mt-4" />
             </span>
-            <span onClick={scrollRight} className="cursor-pointer">
+            <span
+              onClick={scrollRight}
+              className="cursor-pointer"
+              title="Scroll Right"
+            >
               <TbArrowMoveRight className="text-3xl" />
             </span>
           </div>

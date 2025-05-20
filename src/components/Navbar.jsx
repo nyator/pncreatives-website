@@ -89,7 +89,7 @@ const Navbar = ({ title, className }) => {
             </HashLink>
           </li>
           <li className="list-none  text-navblack font-cMedium hover:text-primary transition-all duration-500 ease-in-out">
-            <Link to={"/works"}>works</Link>
+            <Link to={"/works"}>Works</Link>
           </li>
         </div>
 

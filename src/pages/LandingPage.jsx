@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Title from "../components/Title.jsx";
 import { underline, underline2 } from "../constants/assets.js";
@@ -29,6 +29,25 @@ const serviceContentMap = {
 const LandingPage = () => {
   // Set default tab to first service
   const [activeTab, setActiveTab] = useState(services[0]?.title);
+
+  // Ref for the horizontal scroll container
+  const contentRef = useRef(null);
+
+  // Helper to get current index
+  const currentIndex = services.findIndex((s) => s.title === activeTab);
+
+  // Scroll handlers for content
+  const scrollAmount = 350; // px, adjust as needed
+  const handleContentPrev = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    }
+  };
+  const handleContentNext = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
 
   // Get the related content array for the active tab
   const relatedContent = serviceContentMap[activeTab];
@@ -117,7 +136,10 @@ const LandingPage = () => {
             </div>
             {/* Show related content cards */}
             {relatedContent && relatedContent.length > 0 && (
-              <div className="flex gap-8 mt-8 overflow-x-auto scroll-smooth ">
+              <div
+                className="flex gap-8 mt-8 overflow-x-auto scroll-smooth"
+                ref={contentRef}
+              >
                 {relatedContent.map((item) => (
                   <div
                     key={item.id}
@@ -152,13 +174,21 @@ const LandingPage = () => {
             )}
             <div className="text-white flex items-center justify-center gap-2">
               <span>
-                <TbArrowMoveLeft className="text-3xl" />
+                <TbArrowMoveLeft
+                  className="text-3xl cursor-pointer"
+                  onClick={handleContentPrev}
+                  title="Scroll Left"
+                />
               </span>
               <span>
                 <CgBorderTop className="text-3xl mt-4" />
               </span>
               <span>
-                <TbArrowMoveRight className="text-3xl" />
+                <TbArrowMoveRight
+                  className="text-3xl cursor-pointer"
+                  onClick={handleContentNext}
+                  title="Scroll Right"
+                />
               </span>
             </div>
           </div>
