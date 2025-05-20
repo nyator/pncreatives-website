@@ -97,7 +97,7 @@ function Booking() {
         <title>Booking | PN Creatives</title>
       </Helmet>
       {/* Add Toaster for toast notifications */}
-      <Toaster position="top-right" reverseOrder={false} />
+      <Toaster position="bottom-center" reverseOrder={false} />
       <div className="text-primary font-cVariable w-9/12 md:w-4/6 mx-auto min-h-screen flex flex-col justify-center items-center content-evenly space-y-[3rem] pt-20 ">
         <div className="bg-white/80 rounded-[20px] p-8 w-full md:w-3/4 shadow-lg flex flex-col items-center space-y-6">
           <h1 className="text-clamp text-center font-cSemibold relative">

@@ -58,8 +58,8 @@ const LandingPage = () => {
         <title>pncreativesgh</title>
       </Helmet>
       <section className="bg-hero-pattern">
-        <div className="text-primary font-cVariable w-10/12 md:w-4/6 mx-auto min-h-screen justify-center items-center content-evenly space-y-[3rem]">
-          <div className="leading-none font-cRegular line-clamp-[7]">
+        <div className="text-primary font-cVariable w-10/12 md:w-4/6 mx-auto min-h-screen justify-center items-center content-evenly space-y-[1rem]">
+          <div className="leading-none font-cRegular line-clamp-[7] mt-16 md:mt-0">
             <h1 className="text-clamp text-start relative">
               <span className="font-cMedium">Refresh Your</span>
               <div className="bg-gradient-to-l from-white to-secondary-default absolute left-2/3 md:left-2/4 top-1/3 rounded-full p-[2px] z-10">
