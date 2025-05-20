@@ -11,7 +11,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 const navLinks = [
   { title: "Services", href: "/#services", id: 1 },
   { title: "About Us", href: "/#about", id: 2 },
-  { title: "works", href: "/works", id: 3 },
+  { title: "Works", href: "/works", id: 3 },
 ];
 
 const Navbar = ({ title, className }) => {

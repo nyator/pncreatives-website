@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import Title from "../components/Title";
 import { underline2 } from "../constants/assets.js";
 import { services } from "../constants/index.js";
@@ -25,8 +26,12 @@ const Portfolio = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Portfolio | PN Creatives</title>
+      </Helmet>
       <section className="bg-gradient-to-bl from-primary to-black min-h-screen">
         <div className="w-10/12 md:w-5/6 mx-auto py-24 content-evenly space-y-[3rem]">
+          
           {/* Title and tab buttons only, not fixed */}
           <div className="flex flex-col md:flex-row md:items-center justify-evenly gap-2 md:gap-8 mb-8">
             <Title title="Works" className="text-white" icon={underline2} />
@@ -46,6 +51,7 @@ const Portfolio = () => {
                 </button>
               ))}
             </div>
+            
           </div>
           {/* Show works as horizontal scroll cards */}
           {works.length > 0 ? (

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Title from "../components/Title.jsx";
 import { underline, underline2 } from "../constants/assets.js";
 import {
@@ -34,6 +35,9 @@ const LandingPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>pncreativesgh</title>
+      </Helmet>
       <section className="bg-hero-pattern">
         <div className="text-primary font-cVariable w-10/12 md:w-4/6 mx-auto min-h-screen justify-center items-center content-evenly space-y-[3rem]">
           <div className="leading-none font-cRegular line-clamp-[7]">
