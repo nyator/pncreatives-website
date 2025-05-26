@@ -165,7 +165,7 @@ const LandingPage = () => {
                   </div>
                 ))}
               </div>
-            )}
+            )}  
             {/* Optionally, show a fallback if no content */}
             {(!relatedContent || relatedContent.length === 0) && (
               <div className="text-white text-center mt-10">
